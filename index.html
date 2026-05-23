@@ -696,6 +696,8 @@ section {
   margin-bottom:2rem;
   display:flex; align-items:center; gap:0.5rem;
   height:1.5rem;
+  flex-wrap:wrap;
+  overflow:visible;
 }
 .hero-role .prefix { color:var(--g); }
 #hero-typed { color:var(--text); }
@@ -1434,7 +1436,7 @@ footer {
    RESPONSIVE
 ═══════════════════════════════════════ */
 @media(max-width:960px){
-  .hero-inner{grid-template-columns:1fr;padding:4rem 2rem}
+  .hero-inner{grid-template-columns:1fr;padding:6rem 1.5rem 3rem}
   .hero-right{display:none}
   .about-grid{grid-template-columns:1fr;gap:2rem}
   .skills-layout{grid-template-columns:1fr;gap:2rem}
@@ -1445,19 +1447,28 @@ footer {
   .nav-hamburger{display:flex}
   .nav-links{display:none}
   .nav-status{display:none}
+  .hero-left{padding-top:0}
+  .hero-name{font-size:clamp(3rem,14vw,6rem)}
+  .hero-bio{font-size:0.95rem;max-width:100%}
 }
 @media(max-width:600px){
-  .hero-stats{gap:0.6rem;flex-wrap:wrap}
-  .hstat{padding:0.75rem 1rem}
+  .hero-inner{padding:5rem 1.2rem 2rem}
+  .hero-name{font-size:clamp(2.8rem,16vw,5rem);letter-spacing:1px}
+  .hero-role{font-size:0.85rem;height:auto;min-height:1.5rem;margin-bottom:1.5rem}
+  .hero-bio{font-size:0.9rem;line-height:1.7;margin-bottom:2rem}
+  .hero-stats{gap:0.5rem;flex-wrap:wrap}
+  .hstat{padding:0.75rem 1rem;flex:1;min-width:calc(50% - 0.5rem)}
   .proj-grid{grid-template-columns:1fr}
   .ach-grid{grid-template-columns:1fr}
   .cert-grid{grid-template-columns:1fr}
   .os-grid{grid-template-columns:1fr}
   footer{flex-direction:column;text-align:center}
-  .hero-ctas{flex-direction:column;align-items:flex-start}
+  .hero-ctas{flex-direction:column;align-items:stretch}
   .hero-ctas .btn{width:100%;justify-content:center}
   .sec-title{font-size:clamp(1.6rem,6vw,3rem)}
   .contact-big{font-size:clamp(2.5rem,12vw,6rem)}
+  section{padding:4rem 1.2rem}
+  .hero-overline{font-size:0.6rem;padding:0.3rem 0.8rem}
 }
 
 /* ACHIEVEMENTS FIX */
@@ -2194,6 +2205,8 @@ footer {
     <div class="cert-card reveal">
       <div class="cert-glow b"></div>
       <div><div class="cert-name">Introduction to Networks</div><div class="cert-issuer">Cisco Networking Academy</div></div>
+      <div><div class="cert-name">Human Computer Interaction</div><div class="cert-issuer">NPTEL (IIT)</div></div>
+      <div><div class="cert-name">AWS AI Practitioner Challenge</div><div class="cert-issuer">Udacity × Amazon Web Services</div></div>
     </div>
   </div>
 </section>
