@@ -1213,6 +1213,7 @@ section {
   background:var(--glass); border:1px solid var(--border);
   border-left:3px solid var(--g); border-radius:8px; padding:1.6rem;
   transition:transform 0.25s, box-shadow 0.25s;
+  box-sizing:border-box; overflow:hidden; word-wrap:break-word;
 }
 .lead-card:hover { transform:translateY(-4px); box-shadow:0 0 30px rgba(0,255,136,0.08); }
 .lead-role { font-weight:800; font-size:0.95rem; margin-bottom:0.3rem; }
@@ -1441,7 +1442,8 @@ footer {
   .about-grid{grid-template-columns:1fr;gap:2rem}
   .skills-layout{grid-template-columns:1fr;gap:2rem}
   .skill-orbit-wrap{max-width:280px}
-  .lead-grid{grid-template-columns:1fr}
+  .lead-grid{grid-template-columns:1fr !important; max-width:100% !important;}
+  .lead-card{padding:1.2rem; width:100%;}
   nav{padding:0 1.5rem}
   section{padding:5rem 1.5rem}
   .nav-hamburger{display:flex}
@@ -2205,7 +2207,13 @@ footer {
     <div class="cert-card reveal">
       <div class="cert-glow b"></div>
       <div><div class="cert-name">Introduction to Networks</div><div class="cert-issuer">Cisco Networking Academy</div></div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-glow g"></div>
       <div><div class="cert-name">Human Computer Interaction</div><div class="cert-issuer">NPTEL (IIT)</div></div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-glow" style="background:#ff9900;box-shadow:0 0 10px #ff9900"></div>
       <div><div class="cert-name">AWS AI Practitioner Challenge</div><div class="cert-issuer">Udacity × Amazon Web Services</div></div>
     </div>
   </div>
